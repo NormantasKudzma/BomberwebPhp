@@ -12,4 +12,4 @@ before_script:
   
 script:
   - php codecept.phar build
-  - php codecept.phar run tests/api/GetPidCept.php --steps
+  - php codecept.phar run tests/api/GetPidCept.php --steps --debug
