@@ -1,8 +1,9 @@
 class_name: ApiTester
 modules:
-    enabled:
-        - \Helper\Api
-        - REST:
-            url: http://localhost/
-            depends: PhpBrowser
-            part: Json
+      enabled: [PhpBrowser, REST, ApiHelper]
+      config:
+            PhpBrowser:
+                  url: http://localhost/
+            REST:
+                - url: http://localhost/
+                - part: Json
