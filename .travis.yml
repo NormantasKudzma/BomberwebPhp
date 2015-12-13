@@ -12,6 +12,6 @@ before_script:
   
 script:
   - ls -l
-  - php codecept.phar run tests/api/GetPidCept.php
   - php codecept.phar build
+  - php codecept.phar run tests/api/GetPidCept.php
   - ls -l tests
