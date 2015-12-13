@@ -1,2 +1,4 @@
 *.jar
 /lib
+tests/_output/*
+codecept.phar
