@@ -11,4 +11,5 @@ before_script:
   - php codecept.phar bootstrap
   
 script:
-  php codecept.phar run api
+  - ls
+  - php codecept.phar run api
