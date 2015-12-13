@@ -1,9 +1,14 @@
 language: php
 
 php:
-  - '5.4'
-  - '5.5'
   - '5.6'
 
 notifications:
   email: false
+  
+before_script:
+  - sudo curl -LsS http://codeception.com/codecept.phar -o /usr/local/bin/codecept
+  - sudo chmod a+x /usr/local/bin/codecept
+  
+script:
+  php codecept run
