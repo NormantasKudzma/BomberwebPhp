@@ -7,8 +7,8 @@ notifications:
   email: false
   
 before_script:
-  - php composer.phar require "codeception/codeception:*"
-  - php ./vendor/bin/codecept bootstrap
+  - wget http://codeception.com/codecept.phar
+  - php codecept.phar bootstrap
   
 script:
-  php ./vendor/bin/codecept run
+  php codecept.phar run
