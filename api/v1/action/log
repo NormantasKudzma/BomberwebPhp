@@ -1,0 +1,2 @@
+2015-12-13 13:10 [METHOD] GET
+2015-12-13 13:10 [RESPONSE] {"action":["Bomb","CreateRoom","Die","EnterRoom","Explode","GameEnd","GameStart","GameState","GetPid","LeaveRoom","Move","UpdatePlayers","UpdateRooms"],"response":"success"}
