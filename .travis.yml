@@ -12,5 +12,6 @@ before_script:
   
 script:
   - pwd
+  - curl -H "Content-Type: application/json" -X POST -d '{"action":"GetPid"}' http://localhost/api/v1/action/GetPid.php
   - php codecept.phar build
   - php codecept.phar run tests/api/GetPidCept.php --steps
