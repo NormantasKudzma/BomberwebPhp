@@ -2,6 +2,7 @@ class_name: ApiTester
 modules:
     enabled:
         - \Helper\Api
+        - PhpBrowser
         - REST:
             url: localhost/api/v1/
             depends: PhpBrowser

@@ -11,5 +11,5 @@ before_script:
   - php codecept.phar bootstrap
   
 script:
-  - ls
-  - php codecept.phar run api
+  - ls -lR
+  - php codecept.phar run tests/api/GetPidCept.php
