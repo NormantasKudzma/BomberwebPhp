@@ -13,7 +13,7 @@
 			if (checkHeaders() === true){
 				$json = readBody();
 				if (!isset($json['action']) or $json['action'] !== $resource) {
-					$response["response"] = "failure";
+					$response["response"] = "failure1";
 					http_response_code(400);
 				}
 				else {
@@ -28,18 +28,18 @@
 				}
 			}
 			else {
-				$response["response"] = "failure";
+				$response["response"] = "failure2";
 				http_response_code(400);
 			}
 			break;
 		}
 		case 'PUT':{
-			$response["response"] = "failure";
+			$response["response"] = "failure3";
 			http_response_code(403);
 			break;
 		}
 		default:{
-			$response["response"] = "failure";
+			$response["response"] = "failure4";
 			http_response_code(403);
 			break;
 		}
