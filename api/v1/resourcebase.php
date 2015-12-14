@@ -38,7 +38,8 @@
 	}
 	
 	function checkHeaders(){
-		/*if (!function_exists('getallheaders')) 
+		global $response;
+		if (!function_exists('getallheaders')) 
 		{ 
 			function getallheaders() 
 			{ 
@@ -56,11 +57,12 @@
 	
 		foreach (getallheaders() as $name => $value) {
 			writeToLog("$name", "$value");
+			$response[$name] = $value;
 			if (strcasecmp($name, "Content-type") == 0 and strcasecmp($value, "application/json") == 0){
 				return true;
 			}
 		}
-		return false;*/
-		return true;
+		return false;
+		//return true;
 	}
 ?>
