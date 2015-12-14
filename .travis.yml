@@ -6,9 +6,14 @@ php:
 notifications:
   email: false
   
+services:
+  - mysql
+  
 before_script:
   - wget http://codeception.com/codecept.phar
   - php codecept.phar bootstrap
+  - mysql -u root -p -e 'create database bomberweb'
+  - mysql -u root -p -e 'create table players(id int, gameroom int, x int, y int)' bomberweb
   
 script:
   - sudo apt-get update
