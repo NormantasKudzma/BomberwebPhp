@@ -5,5 +5,5 @@
 	$I->sendPOST('http://localhost/api/v1/action/GetPid.php', json_encode(array('action' => 'GetPid')));
 	$I->seeResponseCodeIs(200);
 	$I->seeResponseIsJson();
-	$I->grabDataFromJsonResponse("pid");
+	$I->seeResponseContains("pid");
 ?>

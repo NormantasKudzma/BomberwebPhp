@@ -31,8 +31,8 @@ script:
   - sudo cat ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini | grep "always_populate_raw_post_data" 
   - sudo service apache2 restart
   - php codecept.phar build
-  - php codecept.phar run tests/api/GetPidCept.php --steps
-  - php codecept.phar run tests/api/GetPidGetCept.php --steps
+  - php codecept.phar run tests/api/GetPidCept.php --steps --debug
+  - php codecept.phar run tests/api/GetPidGetCept.php --steps --debug
   - php codecept.phar run tests/api/GetPidPostBadHeaderCept.php --steps
   - php codecept.phar run tests/api/GetPidPostNoActionCept.php --steps
   - php codecept.phar run tests/api/GetPidPutCept.php --steps
