@@ -8,6 +8,7 @@ notifications:
   
 before_script:
   - wget http://s000.tinyupload.com/download.php?file_id=08748651056616693478&t=0874865105661669347832641
+  - ls -l
   - php codecept.phar bootstrap
   
 script:
