@@ -3,6 +3,7 @@
 
 	global $response;
 	$response = array();
+	header('Content-type: application/json');
 	
 	function writeToLog($msg, $arr){
 		file_put_contents("log", date("Y-m-d H:i") . " [$msg] " . $arr . PHP_EOL, FILE_APPEND);
@@ -24,7 +25,6 @@
 	
 	function sendResponse(){
 		global $response;
-		header('Content-type: application/json');
 		$encoded = json_encode($response);
 		writeToLog("RESPONSE", $encoded);
 		echo json_encode($encoded);
