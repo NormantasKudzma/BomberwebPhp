@@ -1,9 +1,9 @@
 <?php
+	header('Content-type: application/json');
 	include_once("constants.php");
 
 	global $response;
 	$response = array();
-	header('Content-type: application/json');
 	
 	function writeToLog($msg, $arr){
 		file_put_contents("log", date("Y-m-d H:i") . " [$msg] " . $arr . PHP_EOL, FILE_APPEND);
