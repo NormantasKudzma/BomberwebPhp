@@ -22,7 +22,8 @@ script:
   - sudo cp -f build/travis-ci-apache /etc/apache2/sites-available/default
   - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
   - sudo sed -i 's/always_populate_raw_post_data = 0/always_populate_raw_post_data = -1/g' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - sudo cat ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini | grep "always_populate_raw_post_data"
+  - sudo echo "always_populate_raw_post_data = -1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - sudo cat ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini | grep "always_populate_raw_post_data" 
   - sudo service apache2 restart
   - php codecept.phar build
   - php codecept.phar run tests/api/GetPidCept.php --steps --debug
