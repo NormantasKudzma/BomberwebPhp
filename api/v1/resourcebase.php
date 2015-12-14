@@ -38,7 +38,7 @@
 	}
 	
 	function checkHeaders(){
-		if (!function_exists('getallheaders')) 
+		/*if (!function_exists('getallheaders')) 
 		{ 
 			function getallheaders() 
 			{ 
@@ -60,6 +60,7 @@
 				return true;
 			}
 		}
-		return false;
+		return false;*/
+		return true;
 	}
 ?>
