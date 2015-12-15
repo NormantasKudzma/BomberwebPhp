@@ -39,21 +39,22 @@
 	
 	function checkHeaders(){
 		global $response;
-		/*if (!function_exists('getallheaders')) 
+		if (!function_exists('getallheaders')) 
 		{ 
 			function getallheaders() 
 			{ 
-				   $headers = ''; 
-			   foreach ($_SERVER as $name => $value) 
-			   { 
-				   if (substr($name, 0, 5) == 'HTTP_') 
-				   { 
-					   $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value; 
-				   } 
-			   } 
-			   return $headers; 
+				while (@ob_end_flush());
+				$headers = ''; 
+				foreach ($_SERVER as $name => $value) 
+				{ 
+					if (substr($name, 0, 5) == 'HTTP_') 
+					{ 
+						$headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value; 
+					} 
+				} 
+				return $headers; 
 			} 
-		} */
+		}
 	
 		foreach (getallheaders() as $name => $value) {
 			writeToLog("$name", "$value");
