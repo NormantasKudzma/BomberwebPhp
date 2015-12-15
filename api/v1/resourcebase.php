@@ -57,7 +57,6 @@
 	
 		foreach (getallheaders() as $name => $value) {
 			writeToLog("$name", "$value");
-			$response[$name] = $value;
 			if (strcasecmp($name, "Content-type") == 0 and strcasecmp($value, "application/json") == 0){
 				return true;
 			}
